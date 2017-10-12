@@ -1,11 +1,13 @@
 var fs = require('fs')
 
 var dirName = process.argv[2] // 你传的参数是从第 2 个开始的
-fs.existsSync("./" + dirName, function (exists) {
-    if (exists) {
-        process.exit(0)
-    }
-})
+var exist = fs.existsSync("./" + dirName)
+
+if (exist)
+{
+    process.exit(0)
+}
+
 fs.mkdirSync("./" + dirName) // mkdir $1
 process.chdir("./" + dirName) // cd $1
 fs.mkdirSync('css') // mkdir css
