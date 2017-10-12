@@ -1,8 +1,8 @@
 var fs = require('fs')
 
 var dirName = process.argv[2] // 你传的参数是从第 2 个开始的
-fs.exists("./" + dirName, function (exists) {
-    if (!exists) {
+fs.existsSync("./" + dirName, function (exists) {
+    if (exists) {
         process.exit(0)
     }
 })
