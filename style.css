@@ -1,11 +1,16 @@
 body{
-    background: black;
+    background: #efefef;
+    margin: 0;
 }
 
 .topNavBar{
     color: rgb(183,183,183);
     margin-top: 15px;
     margin-left: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .topNavBar>.logo{
@@ -56,3 +61,17 @@ body{
 a.logo{
     display: block;
 }
+
+.banner {
+    height: 515px;
+    background-image: url(./img/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner .mask{
+    height: 515px;
+    background-color: rgba(0,0,0,0.7)
+}
+
+
