@@ -7,6 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>阴阳</title>
     <style type="text/css">
+        @keyframes spin{
+            from{
+                transform: rotate(0deg);
+            }
+
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        
         #yin-yang {
             width: 48px;
             height: 96px;
@@ -16,6 +26,10 @@
             border-width: 2px 50px 2px 2px;
             border-radius: 100%;
             position: relative;
+            animation-name: spin;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
         }
         #yin-yang:before {
             content: "";
