@@ -15,17 +15,29 @@
     <div id="siteWelcome" class="site-welcome active">
         <div class="loading"></div>
     </div>
-    <div class="topNavBar clearfix">
+    <div id="topNavBar" class="topNavBar clearfix">
         <a class="logo">
             <span class="logoLeft">RS</span>
             <span class="logoRight">card</span>
         </a>
         <nav class="menu">
             <ul class="clearfix">
-                <li>关于</li>
-                <li>技能</li>
-                <li>作品</li>
-                <li>博客</li>
+                <li href="#siteAbout">关于</li>
+                <li href="#siteSkills">技能</li>
+                <li href="#siteWorks" class="menuTrigger">作品
+                    <ul class="submenu">
+                        <li>作品1</li>
+                        <li>作品2</li>
+                        <li>作品3</li>
+                    </ul>
+                </li>
+                <li class="menuTrigger">博客
+                    <ul class="submenu">
+                        <li>博客1</li>
+                        <li>博客2</li>
+                        <li>博客3</li>
+                    </ul>
+                </li>
                 <li>日历</li>
                 <li>联系方式</li>
                 <li>其他</li>
@@ -35,7 +47,7 @@
     <div class="banner">
         <div class="mask"></div>
     </div>
-    <div class="userCard">
+    <div id="siteAbout" class="userCard">
         <div class="pictureAndText clearfix">
             <div class="picture">
                 <img src="./img/avatar.jpg" width=299 height=347 alt="头像">
@@ -84,7 +96,7 @@
         郭寰宇，软件开发工程师
         <br> 技能：Web开发，Java 开发
     </p>
-    <section class="skills">
+    <section id="siteSkills" class="skills">
         <h2>技能</h2>
         <ol class="clearfix">
             <li>
@@ -137,7 +149,7 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section id="siteWorks" class="portfolio">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix">
@@ -178,4 +190,5 @@
 
 </body>
 <script src="./main.js"></script>
+
 </html>
