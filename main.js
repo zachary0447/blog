@@ -11,6 +11,7 @@ window.onscroll = function (xxx) {
     }
 }
 
+
 let aTags = document.getElementsByClassName('menuTrigger')
 {
     for (let i = 0; i < aTags.length; i++) {
@@ -42,21 +43,19 @@ let scrollTags = document.querySelectorAll('nav.menu > ul > li')
             let href = a.getAttribute('href');
             let element = document.querySelector(href);
             let top = element.offsetTop;
-            let n = 25; //滚动次数
-            let duration = 500 / n; //单次滚动时间
             let currentTop = window.scrollY;
             let targetTop = top - 70;
-            let distance = (targetTop - currentTop) / n;
-            let j = 0;
-            let id = setInterval(()=> {
-                if (j === n) {
-                    window.clearInterval(id);
-                    return;
-                }
-                j = j + 1;
-                window.scrollTo(0, currentTop + distance * j);
+            let s = targetTop - currentTop;
+            var coords = { y: currentTop };
+            var tween = new TWEEN.Tween(coords)
+                .to({ y: targetTop }, (s / 100) * 1000)
+                .easing(TWEEN.Easing.Quadratic.InOut)
+                .onUpdate(function () {
+                    window.scrollTo(0, coords.y)
+                })
+                .start();
+            
 
-            }, duration)
         }
     }
 }
